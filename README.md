@@ -5,10 +5,7 @@ I thought it was a nice idea to bring the nostalgia back in GTA:V and decided to
 
 
 Started coding on: 19 Jan, 2017
-
-Days elapsed: 14
-
-Last log update: 2 February, 2017
+Amout of days it took for final release: 14 days
 
 
 Features
@@ -16,21 +13,19 @@ Features
 "Dynamic" means it can be altered within the game by Game Admins (so without touching code.)
 
 
+### [v1.7]
+Added WebRTC voice chat.
+
+
 ### [v1.6]
 
-Added CreateGroup / CreateProperty / AddProduct interfaces
-Added Character Menu interface.
-Added Skill XP tables and system.
+Added CreateGroup UI.
 Removed BCrypt hashing.
 Implemented date/time tokens for web-gameserver communication.
-Added Attack/Life/StrengthXP.
-Added new Character Menu + Skills Menu.
-Added improved XPTables.
 Added latest SQL data structure.
 
 
 ### [v1.5]
-Documentation online at: Link
 Added temporary account models for both WebCP and Server until NET.CORE is available.
 Updated HTTPController and listening service.
 All browsing is done remotely - all web client files are deleted.
