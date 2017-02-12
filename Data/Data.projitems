@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>78168e93-7b0d-4425-84a3-69274b597165</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Data</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Attributes\BlipTypeAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dictionaries\Animations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\GroupExtraType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\JobType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\PropertyType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\GroupType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EnumExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IAccountData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessagingModels\CreateGroupMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Ban.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Character.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Group.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GroupMember.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Job.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Property.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Vehicle.cs" />
+  </ItemGroup>
+</Project>

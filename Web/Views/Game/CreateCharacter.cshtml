@@ -1,0 +1,54 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@using TheGodfatherGM.Web.Models;
+@using TheGodfatherGM.Web.Models.GameViewModel;
+@model CharacterViewModel
+    @{
+        Layout = "_Login";
+        string socialclub = Context.Request.Query["socialclub"].ToString();
+    }
+
+    <main>
+        <center>
+            <div class="section"></div>
+            <div class="container">
+                <div class="z-depth-5 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+                    <form asp-controller="Game" asp-action="CreateCharacter" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="col s12">
+                        <img src="~/images/thegodfather-logo.png" style="width:125px" class="circle responsive-img" />
+                        <input type="hidden" name="socialclub" value=@socialclub />
+                        <br />
+                        <div class='row'>
+                            <div class='col s12'>
+                            </div>
+                        </div>
+
+                        <h5>Create a Character</h5>
+                        <hr />
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <div>
+                                    <label asp-for="Name" for='email'>Enter your name</label>
+                                    <input asp-for="Name" class='validate' type='text' id='name' autofocus />
+                                </div>
+                            </div>
+                        </div>
+
+                        <center>
+                            <div class="row">
+                                <button asp-controller="Game" asp-action="CreateCharacter" type="submit" name="btn_login" class="col s12 btn btn-large waves-effect blue">Create</button>
+                            </div>
+                            <br />
+                        </center>
+
+                    </form>
+                </div>
+            </div>
+
+        </center>
+
+        <div class="section"></div>
+        <div class="section"></div>
+    </main>

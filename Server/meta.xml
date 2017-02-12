@@ -1,0 +1,42 @@
+﻿<meta>
+
+  <info name="The Godfather GM" author="Jingles" type="gamemode"/>
+  <script src="bin/Debug/The Godfather GM.dll" type="server" lang="compiled" />
+  
+  <settings>
+    <setting name="web_server" value="localhost" default="localhost"/>
+    <setting name="web_server_port" value="5000" default="5000"/>
+    <setting name="auth_listening_server" value="http://localhost" default="http://localhost"/>
+    <setting name="auth_listening_port" value="3001" default="3001"/>
+    <setting name="web_rtc_server" value="http://localhost" default="http://localhost"/> <!-- WebRTC requires https when hosted -->
+    <setting name="web_rtc_port" value="5000" default="5000"/>
+    <setting name="database_server" value="localhost" default="localhost"/>
+    <setting name="database_port" value="3306" default="3306" />
+    <setting name="database_user" value="godfather" default="godfather"/>
+    <setting name="database_password" value="" default=""/>
+    <setting name="database_using_ssl" value="false" default="false" />
+    <setting name="database_ssl_pfx_file" value="" default="" />
+    <setting name="database_ssl_pfx_password" value="" default="" />
+    <setting name="database_database" value="godfather" default="godfather" />
+    <setting name="database_min_pool_size" value="1" default="1" />
+    <setting name="database_max_pool_size" value="20" default="20" />
+  </settings>
+
+  <assembly ref="System.Data.dll" />
+  <assembly ref="System.Xml.dll" />
+  <assembly ref="EntityFramework.dll" />
+  <assembly ref="EntityFramework.SqlServer.dll" />
+  <assembly ref="Microsoft.AspNet.Identity.Core.dll" />
+  <assembly ref="Microsoft.AspNet.Identity.EntityFramework.dll" />
+  <assembly ref="MySql.Data.dll" />
+  <assembly ref="Mysql.Data.Entity.EF6.dll" />
+  <assembly ref="System.ComponentModel.DataAnnotations.dll"/>
+
+  <script src="client/js/CEF/CEFController.js" type ="client" lang="javascript"/>
+  <script src="client/js/ServersideCamera.js" type="client" lang="javascript" />
+  <script src="client/js/Login.js" type="client" lang="javascript" />
+  <script src="client/js/MenuManager.js" type="client" lang="javascript" />
+  <script src="client/js/KeyManager.js" type="client" lang="javascript" />
+  <script src="client/js/BlipManager.js" type="client" lang="javascript" />
+  <script src="client/js/Hud.js" type="client" lang="javascript" />
+</meta>

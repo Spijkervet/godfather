@@ -1,0 +1,78 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@using TheGodfatherGM.Web.Models;
+@using TheGodfatherGM.Web.Models.GameViewModel.Group;
+@using TheGodfatherGM.Data.Enums;
+@model CreateGroupViewModel
+@{
+    Layout = "_Login";
+    string socialclub = Context.Request.Query["socialclub"].ToString();
+}
+
+<main>
+    <center>
+        <div class="section"></div>
+        <div class="container">
+            <div class="z-depth-5 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+                <form asp-controller="Group" asp-action="CreateGroup" method="post" class="col s12">
+
+                    <h5>Create a group</h5>
+                    <img src="~/images/thegodfather-logo.png" style="width:125px" class="circle responsive-img" />
+                    <input type="hidden" name="socialclub" value=@socialclub />
+                    <hr />
+                    <br />
+                    <div class='row'>
+                        <div class='col s12'>
+                        </div>
+                    </div>
+                    <h3>
+                        <label asp-for="Name">Name</label>
+                        <input asp-for="Name" class='validate' type='text' id='name' autofocus />
+                    </h3>
+                    <hr />
+                    <div class='row'>
+                        <div class="input-field col s12">
+                            <select asp-for="Type">
+                                @{
+                                    foreach (var groupType in Enum.GetValues(typeof(GroupType)))
+                                    {
+                                        <option value="@groupType">@groupType.ToString()</option>
+                                    }
+                                }
+                            </select>
+                            <label>Group Type</label>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class="input-field col s12">
+                            <select asp-for="Type">
+                                @{
+                                    foreach (var groupExtraType in Enum.GetValues(typeof(GroupExtraType)))
+                                    {
+                                        <option value="@groupExtraType">@groupExtraType.ToString()</option>
+                                    }
+                                }
+                            </select>
+                            <label>Group Extra Type</label>
+                        </div>
+                    </div>
+
+                    <center>
+                        <div class="row">
+                            <button asp-controller="Group" asp-action="CreateGroup" type="submit" name="btn_login" class="col s12 btn btn-large waves-effect blue">Create</button>
+                        </div>
+                        <br />
+                    </center>
+
+                </form>
+            </div>
+        </div>
+
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+</main>

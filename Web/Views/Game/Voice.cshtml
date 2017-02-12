@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>OpenVoice</title>
+    </head>
+    <body>
+
+		OpenVoice
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="https://simplewebrtc.com/latest-v2.js"></script>
+        <script>
+
+        	// This is using the public Google stun server.
+	        webrtc = new SimpleWebRTC({
+		        localVideoEl: 'local-videos-container',
+		        remoteVideosEl: 'videos-container',
+		        autoRequestMedia: true,
+		        detectSpeakingEvents: true,
+		        autoAdjustMic: false,
+		        media: { audio: true, video: false }
+	 		});
+
+            webrtc.on('readyToCall', function () {
+                webrtc.joinRoom('gta-network-godfather');
+            });
+
+            function showVolume(el, volume) {
+                if (!el) return;
+                if (volume < -45) volume = -45;
+                if (volume > -20) volume = -20;
+                el.value = volume;
+            }
+        </script>
+    </body>
+</html>
