@@ -4,10 +4,6 @@ The Godfather script's name comes from an early SA-MP gamemode.
 I thought it was a nice idea to bring the nostalgia back in GTA:V and decided to rework the original idea into a new gamemode for GTA:Network.
 
 
-Started coding on: 19 Jan, 2017
-Amout of days it took for final release: 14 days
-
-
 Features
 
 "Dynamic" means it can be altered within the game by Game Admins (so without touching code.)
