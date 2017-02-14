@@ -5,14 +5,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup>
-    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
-    <RootNamespace>TheGodfatherGM.Web</RootNamespace>
-    <OutputTypeEx>exe</OutputTypeEx>
-    <OutputPath>
-    </OutputPath>
-    <Prefer32Bit>True</Prefer32Bit>
-  </PropertyGroup>
   <ItemGroup>
     <None Remove="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
