@@ -41,7 +41,6 @@ Server now runs well on compiled version.
 Added HTTPController for Node.js implementation and server-controlled browsing.  
 Added SessionIDs.  
 Added settings for web- and listening server.  
-Added documentation to WebCP (soon viewable!).  
 
 ### [v1.3]
 Further implemented Entity Frameworks. Many structures were reworked: referencing is now done primarily through keys/indexes to ensure expandibility.  
@@ -76,10 +75,8 @@ You can create multiple characters within one account. All character data is sto
 
 1. A character can hold administrator privileges.  
 2. A character can join a group (see below what groups are).  
-3. Characters can train their skills with jobs or activities.  
-4. These skills are translated into experience points (XP). This determines the character's level.  
-5. Characters can own properties.  
-6. Characters can own vehicles.  
+3. Characters can own properties.  
+4. Characters can own vehicles.  
 
 
 
