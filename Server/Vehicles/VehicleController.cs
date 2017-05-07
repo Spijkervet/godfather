@@ -198,9 +198,11 @@ namespace TheGodfatherGM.Server.Vehicles
                     {
                         VehicleController _VehicleController = EntityManager.GetVehicle(player.vehicle);
                         Vector3 newPos = player.vehicle.position + new Vector3(0.0f, 0.0f, 0.5f);
+                        float newRot = player.vehicle.rotation.Z;
+                        _VehicleController.VehicleData.Rot = newRot;
                         _VehicleController.VehicleData.PosX = newPos.X;
-                        _VehicleController.VehicleData.PosX = newPos.Y;
-                        _VehicleController.VehicleData.PosX = newPos.Z;
+                        _VehicleController.VehicleData.PosY = newPos.Y;
+                        _VehicleController.VehicleData.PosZ = newPos.Z;
 
                         API.sendNotificationToPlayer(player, "~g~Server: ~w~Your vehicle is parked!");
 
